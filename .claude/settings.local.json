@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(npm create *)",
+      "PowerShell(npm init *)",
+      "PowerShell(npm install *)",
+      "PowerShell(npx tailwindcss init -p)",
+      "PowerShell(.\\\\node_modules\\\\.bin\\\\tailwindcss init -p)",
+      "PowerShell(New-Item *)",
+      "PowerShell(npm run *)",
+      "PowerShell(git init *)",
+      "PowerShell(git add *)"
+    ]
+  }
+}
