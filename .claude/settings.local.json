@@ -16,7 +16,8 @@
       "Skill(superpowers:executing-plans)",
       "Bash(npx vite *)",
       "Bash(npm install *)",
-      "Bash(npm run *)"
+      "Bash(npm run *)",
+      "Bash(git push *)"
     ]
   }
 }
