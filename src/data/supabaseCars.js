@@ -44,27 +44,55 @@ const requireSupabase = () => {
 export const fetchCarsFromSupabase = async () => {
   requireSupabase();
 
-  const { data, error } = await supabase
-    .from('cars')
-    .select('*')
-    .order('order', { ascending: true, nullsFirst: false })
-    .order('created_at', { ascending: false });
+  try {
+    const { data, error } = await supabase
+      .from('cars')
+      .select('*')
+      .order('order', { ascending: true, nullsFirst: true })
+      .order('created_at', { ascending: false });
 
-  if (error) throw error;
-  return data.map(mapDbCar);
+    if (error) throw error;
+    return data.map(mapDbCar);
+  } catch (error) {
+    console.error('Error fetching cars:', error);
+    throw error;
+  }
 };
 
 export const createCarInSupabase = async (car) => {
   requireSupabase();
 
-  const { data, error } = await supabase
-    .from('cars')
-    .insert(mapUiCar(car))
-    .select('*')
-    .single();
+  try {
+    // Get the highest order number
+    const { data: existingCars, error: fetchError } = await supabase
+      .from('cars')
+      .select('order')
+      .order('order', { ascending: false })
+      .limit(1);
 
-  if (error) throw error;
-  return mapDbCar(data);
+    if (fetchError) throw fetchError;
+
+    const nextOrder = (existingCars && existingCars.length > 0 && existingCars[0].order !== null)
+      ? existingCars[0].order + 1
+      : 0;
+
+    const carData = {
+      ...mapUiCar(car),
+      order: nextOrder,
+    };
+
+    const { data, error } = await supabase
+      .from('cars')
+      .insert(carData)
+      .select('*')
+      .single();
+
+    if (error) throw error;
+    return mapDbCar(data);
+  } catch (error) {
+    console.error('Error creating car:', error);
+    throw error;
+  }
 };
 
 export const updateCarInSupabase = async (carId, car) => {
@@ -112,21 +140,26 @@ export const replaceCarsInSupabase = async (cars) => {
 export const updateCarsOrderInSupabase = async (cars) => {
   requireSupabase();
 
-  const updates = cars.map((car, index) => ({
-    id: car.id,
-    order: index,
-  }));
+  try {
+    const updates = cars.map((car, index) => ({
+      id: car.id,
+      order: index,
+    }));
 
-  for (const update of updates) {
-    const { error } = await supabase
-      .from('cars')
-      .update({ order: update.order })
-      .eq('id', update.id);
+    for (const update of updates) {
+      const { error } = await supabase
+        .from('cars')
+        .update({ order: update.order })
+        .eq('id', update.id);
 
-    if (error) throw error;
+      if (error) throw error;
+    }
+
+    return cars;
+  } catch (error) {
+    console.error('Error updating cars order:', error);
+    throw error;
   }
-
-  return cars;
 };
 
 export const signInAdmin = async (email, password) => {
