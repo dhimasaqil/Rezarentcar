@@ -1,8 +1,9 @@
-import { useMemo, useState } from 'react';
+import { useMemo, useState, useEffect } from 'react';
 import { useCarContext } from '../context/CarContext';
 import CarCard from '../components/CarCard';
 import CarDetailModal from '../components/CarDetailModal';
 import FilterBar from '../components/FilterBar';
+import { updateMetaTags } from '../utils/seo';
 
 const Catalog = () => {
   const { cars, loading, error } = useCarContext();
@@ -13,6 +14,14 @@ const Catalog = () => {
     maxPrice: '',
   });
   const [selectedCar, setSelectedCar] = useState(null);
+
+  useEffect(() => {
+    updateMetaTags(
+      'Katalog Sewa Mobil Hiace Semarang - Pilih Mobil Terbaik',
+      'Katalog lengkap sewa mobil Hiace Semarang dan kendaraan premium lainnya. Pilih berdasarkan kategori, transmisi, dan harga yang sesuai dengan kebutuhan Anda.',
+      'katalog sewa mobil hiace semarang, rental mobil semarang, daftar mobil sewa'
+    );
+  }, []);
 
   const filteredCars = useMemo(() => {
     return cars.filter((car) => {
@@ -31,9 +40,9 @@ const Catalog = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(255,193,7,0.18),transparent_34%)]" />
         <div className="container-luxury relative">
           <p className="eyebrow mb-4">Katalog Armada</p>
-          <h1 className="mb-4 text-4xl font-black md:text-5xl">Katalog Mobil</h1>
+          <h1 className="mb-4 text-4xl font-black md:text-5xl">Katalog Sewa Mobil Hiace Semarang</h1>
           <p className="max-w-2xl leading-7 text-white/70">
-            Pilih mobil berdasarkan kebutuhan kapasitas, transmisi, dan anggaran harian Anda.
+            Pilih mobil Hiace Semarang dan kendaraan premium lainnya berdasarkan kebutuhan kapasitas, transmisi, dan anggaran harian Anda.
           </p>
         </div>
       </section>

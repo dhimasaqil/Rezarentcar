@@ -4,9 +4,9 @@ const LocationMap = () => {
       <div className="container-luxury grid grid-cols-1 gap-8 lg:grid-cols-2">
         <div>
           <p className="eyebrow">Lokasi</p>
-          <h2 className="mt-3 mb-4 text-3xl font-black text-primary">Area Layanan</h2>
+          <h2 className="mt-3 mb-4 text-3xl font-black text-primary">Lokasi Sewa Mobil Hiace Semarang</h2>
           <p className="mb-6 leading-7 text-gray-700">
-            Kami melayani area kota dan sekitarnya dengan pengantaran unit sesuai kesepakatan.
+            Kami berlokasi di Semarang dan melayani area kota dan sekitarnya dengan pengantaran unit sesuai kesepakatan. Sewa mobil Hiace Semarang kami siap melayani kebutuhan transportasi Anda.
           </p>
           <ul className="space-y-3 text-sm text-gray-700">
             <li className="rounded-lg border border-black/8 bg-white p-4"><strong className="text-primary">Alamat:</strong> Perusahaan Rowosari Megah Asri 1 Blok F No 3, Rowosari, Kec. Tembalang, Kota Semarang, Jawa Tengah 50271</li>

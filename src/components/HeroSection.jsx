@@ -1,11 +1,22 @@
 import { sendWhatsAppGeneral } from '../utils/whatsapp';
+import { useEffect } from 'react';
+import { updateMetaTags, addStructuredData, businessStructuredData } from '../utils/seo';
 
 const HeroSection = () => {
+  useEffect(() => {
+    updateMetaTags(
+      'Sewa Mobil Hiace Semarang - Rental Mobil Terpercaya 24/7',
+      'Sewa mobil Hiace Semarang terpercaya dengan harga terjangkau. Layanan 24/7, mobil terawat, dan proses booking mudah via WhatsApp.',
+      'sewa mobil hiace semarang, rental mobil semarang, sewa hiace, rental hiace semarang'
+    );
+    addStructuredData(businessStructuredData);
+  }, []);
+
   return (
     <section className="relative flex min-h-[760px] items-center overflow-hidden bg-primary text-white">
       <img
         src="/images/heroimage.png"
-        alt="Mobil Toyota untuk rental"
+        alt="Sewa mobil Hiace Semarang - Rental mobil terpercaya dengan harga terjangkau"
         className="absolute inset-0 h-full w-full object-cover"
       />
       <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,0.92)_0%,rgba(0,0,0,0.68)_42%,rgba(0,0,0,0.24)_100%)]" />
@@ -13,12 +24,12 @@ const HeroSection = () => {
 
       <div className="container-luxury relative z-10 py-24">
         <div className="max-w-3xl">
-          <p className="eyebrow mb-6">Rental Mobil Premium</p>
+          <p className="eyebrow mb-6">Sewa Mobil Hiace Semarang</p>
           <h1 className="mb-6 text-5xl font-black leading-[0.98] text-white md:text-6xl lg:text-7xl">
-            Rental Mobil Terpercaya untuk Perjalanan Anda
+            Sewa Mobil Hiace Semarang Terpercaya
           </h1>
           <p className="mb-9 max-w-2xl text-lg leading-8 text-white/76 md:text-xl">
-            Pilihan mobil berkualitas dengan harga terjangkau. Siap melayani kebutuhan transportasi Anda.
+            Layanan sewa mobil Hiace Semarang berkualitas dengan harga terjangkau. Mobil terawat, layanan 24/7, dan proses booking mudah melalui WhatsApp.
           </p>
           <div className="flex flex-col gap-4 sm:flex-row">
             <button

@@ -1,8 +1,35 @@
+import { useEffect } from 'react';
+import { addStructuredData } from '../utils/seo';
+
 const ContactInfo = () => {
+  useEffect(() => {
+    const contactData = {
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      'name': 'Reza Rent Car Semarang',
+      'url': 'https://rezarentcar.com',
+      'telephone': '+62-878-6973-2988',
+      'email': 'info@rentcar.com',
+      'address': {
+        '@type': 'PostalAddress',
+        'streetAddress': 'Perusahaan Rowosari Megah Asri 1 Blok F No 3',
+        'addressLocality': 'Semarang',
+        'addressRegion': 'Jawa Tengah',
+        'postalCode': '50271',
+        'addressCountry': 'ID'
+      },
+      'sameAs': [
+        'https://www.facebook.com/rezarentcar',
+        'https://www.instagram.com/rezarentcar'
+      ]
+    };
+    addStructuredData(contactData);
+  }, []);
+
   return (
     <div className="rounded-luxury bg-white p-6 shadow-editorial">
       <p className="eyebrow mb-2 text-[10px]">Kontak Langsung</p>
-      <h2 className="mb-5 text-xl font-extrabold text-primary">Informasi Kontak</h2>
+      <h2 className="mb-5 text-xl font-extrabold text-primary">Informasi Kontak Reza Rent Car</h2>
       <ul className="space-y-0">
         <li className="flex items-start gap-3 border-b border-black/5 py-3.5">
           <svg className="mt-0.5 h-4 w-4 shrink-0 text-secondary" fill="currentColor" viewBox="0 0 24 24">
