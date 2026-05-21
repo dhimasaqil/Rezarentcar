@@ -43,7 +43,7 @@ const Navbar = () => {
                 RentCar
               </span>
               <span className="mt-0.5 block text-[9px] font-bold uppercase tracking-[0.3em] text-secondary/80">
-                Rental Premium
+                Reza RentCar
               </span>
             </span>
           </Link>

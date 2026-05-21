@@ -15,7 +15,7 @@ const Footer = () => {
             <div>
               <h3 className="text-xl font-extrabold leading-none text-white">RentCar</h3>
               <p className="mt-0.5 text-[9px] font-bold uppercase tracking-[0.3em] text-secondary/80">
-                Rental Premium
+                Reza RentCar
               </p>
             </div>
           </div>
