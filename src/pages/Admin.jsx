@@ -12,6 +12,7 @@ import {
   updateCarInSupabase,
   uploadCarImage,
 } from '../data/supabaseCars';
+import CarOrderManager from '../components/CarOrderManager';
 
 const emptyForm = {
   name: '',
@@ -212,6 +213,24 @@ const Admin = () => {
     }
   };
 
+  const handleReorderCars = async (orderedCars) => {
+    setBusy(true);
+
+    try {
+      if (isSupabaseConfigured) {
+        await replaceCarsInSupabase(orderedCars);
+        await refreshCars();
+      } else {
+        setCars(orderedCars);
+      }
+      setMessage('Urutan mobil berhasil disimpan.');
+    } catch (error) {
+      setMessage(`Gagal menyimpan urutan mobil: ${error.message}`);
+    } finally {
+      setBusy(false);
+    }
+  };
+
   const handleImport = async (event) => {
     const file = event.target.files?.[0];
     if (!file) return;
@@ -296,6 +315,10 @@ const Admin = () => {
         </div>
 
         {message && <div className="mb-6 rounded bg-white p-3 text-sm text-primary shadow">{message}</div>}
+
+        <div className="mb-8">
+          <CarOrderManager cars={cars} onReorder={handleReorderCars} busy={busy} />
+        </div>
 
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           <form onSubmit={submitCar} className="rounded-lg bg-white p-6 shadow lg:col-span-1">
