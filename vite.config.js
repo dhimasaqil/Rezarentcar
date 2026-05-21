@@ -14,10 +14,16 @@ export default defineConfig({
     },
     rollupOptions: {
       output: {
-        manualChunks: {
-          'react-vendor': ['react', 'react-dom'],
-          'router': ['react-router-dom'],
-          'supabase': ['@supabase/supabase-js'],
+        manualChunks: (id) => {
+          if (id.includes('node_modules/react')) {
+            return 'react-vendor'
+          }
+          if (id.includes('node_modules/react-router-dom')) {
+            return 'router'
+          }
+          if (id.includes('node_modules/@supabase')) {
+            return 'supabase'
+          }
         },
       },
     },
