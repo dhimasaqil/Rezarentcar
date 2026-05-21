@@ -11,6 +11,7 @@ import {
   signOutAdmin,
   updateCarInSupabase,
   uploadCarImage,
+  updateCarsOrderInSupabase,
 } from '../data/supabaseCars';
 import CarOrderManager from '../components/CarOrderManager';
 
@@ -218,7 +219,7 @@ const Admin = () => {
 
     try {
       if (isSupabaseConfigured) {
-        await replaceCarsInSupabase(orderedCars);
+        await updateCarsOrderInSupabase(orderedCars);
         await refreshCars();
       } else {
         setCars(orderedCars);
