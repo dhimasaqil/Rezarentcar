@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useCarContext } from '../context/CarContext';
 import { addCar, deleteCar, exportCarsToJSON, importCarsFromJSON, updateCar } from '../data/carsManager';
+import { saveCarsOrder } from '../data/carsOrder';
 import { isSupabaseConfigured } from '../lib/supabaseClient';
 import {
   createCarInSupabase,
@@ -218,12 +219,8 @@ const Admin = () => {
     setBusy(true);
 
     try {
-      if (isSupabaseConfigured) {
-        await updateCarsOrderInSupabase(orderedCars);
-        await refreshCars();
-      } else {
-        setCars(orderedCars);
-      }
+      setCars(orderedCars);
+      saveCarsOrder(orderedCars);
       setMessage('Urutan mobil berhasil disimpan.');
     } catch (error) {
       setMessage(`Gagal menyimpan urutan mobil: ${error.message}`);

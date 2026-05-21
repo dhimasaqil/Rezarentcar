@@ -4,6 +4,7 @@ import {
   saveCarsToStorage,
   loadInitialCars
 } from '../data/carsManager';
+import { applyCarsOrder } from '../data/carsOrder';
 import { isSupabaseConfigured } from '../lib/supabaseClient';
 import { fetchCarsFromSupabase } from '../data/supabaseCars';
 
@@ -29,7 +30,8 @@ export const CarProvider = ({ children }) => {
 
       if (isSupabaseConfigured) {
         const remoteCars = await fetchCarsFromSupabase();
-        setCars(remoteCars);
+        const orderedCars = applyCarsOrder(remoteCars);
+        setCars(orderedCars);
         setDataSource('supabase');
         setError(null);
         return;
@@ -38,11 +40,13 @@ export const CarProvider = ({ children }) => {
       const storedCars = loadCarsFromStorage();
 
       if (storedCars && storedCars.length > 0) {
-        setCars(storedCars);
+        const orderedCars = applyCarsOrder(storedCars);
+        setCars(orderedCars);
       } else {
         const initialCars = await loadInitialCars();
-        setCars(initialCars);
-        saveCarsToStorage(initialCars);
+        const orderedCars = applyCarsOrder(initialCars);
+        setCars(orderedCars);
+        saveCarsToStorage(orderedCars);
       }
 
       setDataSource('local');
