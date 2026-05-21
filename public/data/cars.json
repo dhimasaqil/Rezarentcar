@@ -1,0 +1,62 @@
+[
+  {
+    "id": "1",
+    "name": "Toyota Avanza",
+    "category": "MPV",
+    "capacity": 7,
+    "price": 300000,
+    "transmission": "Manual",
+    "fuel": "Bensin",
+    "year": 2022,
+    "image": "/images/avanza.jpg",
+    "images": ["/images/avanza-1.jpg", "/images/avanza-2.jpg", "/images/avanza-3.jpg"],
+    "features": ["AC", "Audio System", "Power Steering", "Airbag"],
+    "description": "MPV keluarga yang nyaman untuk perjalanan bersama keluarga. Cocok untuk liburan atau acara keluarga.",
+    "terms": "Syarat: KTP, SIM A, Deposit Rp 500.000",
+    "testimonials": [
+      {
+        "name": "Budi Santoso",
+        "rating": 5,
+        "review": "Mobil bagus dan nyaman, pelayanan memuaskan!"
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "name": "Honda Jazz",
+    "category": "Hatchback",
+    "capacity": 5,
+    "price": 250000,
+    "transmission": "Automatic",
+    "fuel": "Bensin",
+    "year": 2023,
+    "image": "/images/jazz.jpg",
+    "images": ["/images/jazz-1.jpg", "/images/jazz-2.jpg"],
+    "features": ["AC", "Audio System", "Power Steering", "Airbag", "Cruise Control"],
+    "description": "Hatchback modern dengan fitur lengkap dan irit bahan bakar.",
+    "terms": "Syarat: KTP, SIM A, Deposit Rp 400.000",
+    "testimonials": []
+  },
+  {
+    "id": "3",
+    "name": "Toyota Fortuner",
+    "category": "SUV",
+    "capacity": 7,
+    "price": 600000,
+    "transmission": "Automatic",
+    "fuel": "Diesel",
+    "year": 2023,
+    "image": "/images/fortuner.jpg",
+    "images": ["/images/fortuner-1.jpg", "/images/fortuner-2.jpg", "/images/fortuner-3.jpg"],
+    "features": ["AC", "Audio System", "Power Steering", "Airbag", "4WD", "Leather Seats"],
+    "description": "SUV premium untuk perjalanan jarak jauh dengan kenyamanan maksimal.",
+    "terms": "Syarat: KTP, SIM A, Deposit Rp 1.000.000",
+    "testimonials": [
+      {
+        "name": "Andi Wijaya",
+        "rating": 5,
+        "review": "Sangat nyaman untuk perjalanan keluarga!"
+      }
+    ]
+  }
+]

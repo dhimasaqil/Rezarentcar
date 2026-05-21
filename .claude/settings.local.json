@@ -11,7 +11,12 @@
       "PowerShell(New-Item *)",
       "PowerShell(npm run *)",
       "PowerShell(git init *)",
-      "PowerShell(git add *)"
+      "PowerShell(git add *)",
+      "Skill(using-superpowers)",
+      "Skill(superpowers:executing-plans)",
+      "Bash(npx vite *)",
+      "Bash(npm install *)",
+      "Bash(npm run *)"
     ]
   }
 }
