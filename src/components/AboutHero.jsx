@@ -12,7 +12,7 @@ const AboutHero = () => {
         </div>
         <div className="rounded-lg border border-white/12 bg-white/8 p-8 text-white backdrop-blur">
           <div className="grid grid-cols-3 gap-4 text-center">
-            <div><div className="text-3xl font-black text-secondary">3+</div><div className="text-sm text-white/62">Unit Awal</div></div>
+            <div><div className="text-3xl font-black text-secondary">100+</div><div className="text-sm text-white/62">Pelanggan</div></div>
             <div><div className="text-3xl font-black text-secondary">24/7</div><div className="text-sm text-white/62">Layanan</div></div>
             <div><div className="text-3xl font-black text-secondary">100%</div><div className="text-sm text-white/62">Terawat</div></div>
           </div>
