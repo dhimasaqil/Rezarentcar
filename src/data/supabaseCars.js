@@ -49,10 +49,12 @@ export const fetchCarsFromSupabase = async () => {
     const { data, error } = await supabase
       .from('cars')
       .select('*')
-      .order('order', { ascending: true, nullsFirst: false })
+      .order('order', { ascending: true, nullsFirst: true })
       .order('created_at', { ascending: false });
 
     if (error) throw error;
+
+    console.log('Fetched cars from Supabase:', data);
     return data.map(mapDbCar);
   } catch (error) {
     console.error('Error fetching cars:', error);
@@ -126,23 +128,9 @@ export const updateCarsOrderInSupabase = async (cars) => {
   requireSupabase();
 
   try {
-    // Check if order column exists by trying to update one car
-    const firstCar = cars[0];
-    if (!firstCar) return cars;
+    if (!cars || cars.length === 0) return cars;
 
-    const { error: testError } = await supabase
-      .from('cars')
-      .update({ order: 0 })
-      .eq('id', firstCar.id)
-      .select('order');
-
-    // If order column doesn't exist, just return without updating
-    if (testError && testError.message.includes('order')) {
-      console.warn('Order column does not exist in database. Skipping order update.');
-      return cars;
-    }
-
-    // If column exists, update all cars with their order
+    // Update all cars with their order
     const updates = cars.map((car, index) => ({
       id: car.id,
       order: index,
@@ -154,9 +142,13 @@ export const updateCarsOrderInSupabase = async (cars) => {
         .update({ order: update.order })
         .eq('id', update.id);
 
-      if (error) throw error;
+      if (error) {
+        console.error(`Error updating order for car ${update.id}:`, error);
+        throw error;
+      }
     }
 
+    console.log('Cars order updated successfully:', updates);
     return cars;
   } catch (error) {
     console.error('Error updating cars order:', error);
