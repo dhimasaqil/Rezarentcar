@@ -219,8 +219,14 @@ const Admin = () => {
     setBusy(true);
 
     try {
-      setCars(orderedCars);
       await saveCarsOrder(orderedCars);
+
+      if (isSupabaseConfigured) {
+        await refreshCars();
+      } else {
+        setCars(orderedCars);
+      }
+
       setMessage('Urutan mobil berhasil disimpan.');
     } catch (error) {
       setMessage(`Gagal menyimpan urutan mobil: ${error.message}`);
