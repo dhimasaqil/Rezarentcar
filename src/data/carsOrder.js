@@ -1,9 +1,17 @@
+import { isSupabaseConfigured } from '../lib/supabaseClient';
+import { updateCarsOrderInSupabase } from './supabaseCars';
+
 const CARS_ORDER_KEY = 'rentcar_cars_order';
 
-export const saveCarsOrder = (cars) => {
+export const saveCarsOrder = async (cars) => {
   try {
     const order = cars.map(car => car.id);
     localStorage.setItem(CARS_ORDER_KEY, JSON.stringify(order));
+
+    if (isSupabaseConfigured) {
+      await updateCarsOrderInSupabase(cars);
+    }
+
     return true;
   } catch (error) {
     console.error('Error saving cars order:', error);

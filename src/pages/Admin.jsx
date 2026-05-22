@@ -220,7 +220,7 @@ const Admin = () => {
 
     try {
       setCars(orderedCars);
-      saveCarsOrder(orderedCars);
+      await saveCarsOrder(orderedCars);
       setMessage('Urutan mobil berhasil disimpan.');
     } catch (error) {
       setMessage(`Gagal menyimpan urutan mobil: ${error.message}`);
