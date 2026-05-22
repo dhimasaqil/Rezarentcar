@@ -5,11 +5,11 @@ const CARS_ORDER_KEY = 'rentcar_cars_order';
 
 export const saveCarsOrder = async (cars) => {
   try {
-    const order = cars.map(car => car.id);
-    localStorage.setItem(CARS_ORDER_KEY, JSON.stringify(order));
-
     if (isSupabaseConfigured) {
       await updateCarsOrderInSupabase(cars);
+    } else {
+      const order = cars.map(car => car.id);
+      localStorage.setItem(CARS_ORDER_KEY, JSON.stringify(order));
     }
 
     return true;
@@ -30,6 +30,10 @@ export const loadCarsOrder = () => {
 };
 
 export const applyCarsOrder = (cars) => {
+  if (isSupabaseConfigured) {
+    return cars;
+  }
+
   const order = loadCarsOrder();
   if (!order || order.length === 0) return cars;
 

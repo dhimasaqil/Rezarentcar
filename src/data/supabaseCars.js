@@ -17,6 +17,7 @@ const mapDbCar = (car) => ({
   description: car.description || '',
   terms: car.terms || '',
   testimonials: Array.isArray(car.testimonials) ? car.testimonials : [],
+  order: car.order ?? null,
 });
 
 const mapUiCar = (car) => ({
@@ -48,6 +49,7 @@ export const fetchCarsFromSupabase = async () => {
     const { data, error } = await supabase
       .from('cars')
       .select('*')
+      .order('order', { ascending: true, nullsFirst: false })
       .order('created_at', { ascending: false });
 
     if (error) throw error;
