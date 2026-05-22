@@ -17,7 +17,9 @@
       "Bash(npx vite *)",
       "Bash(npm install *)",
       "Bash(npm run *)",
-      "Bash(git push *)"
+      "Bash(git push *)",
+      "Bash(xargs grep -l \"admin\\\\|dashboard\" -i)",
+      "Bash(curl -s http://localhost:5173)"
     ]
   }
 }

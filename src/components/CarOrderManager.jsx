@@ -1,8 +1,12 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const CarOrderManager = ({ cars, onReorder, busy }) => {
   const [draggedItem, setDraggedItem] = useState(null);
   const [orderedCars, setOrderedCars] = useState(cars);
+
+  useEffect(() => {
+    setOrderedCars(cars);
+  }, [cars]);
 
   const handleDragStart = (index) => {
     setDraggedItem(index);
