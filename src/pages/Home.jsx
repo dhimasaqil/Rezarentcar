@@ -3,6 +3,7 @@ import ServiceCard from '../components/ServiceCard';
 import CarCarousel from '../components/CarCarousel';
 import TestimonialSlider from '../components/TestimonialSlider';
 import CarDetailModal from '../components/CarDetailModal';
+import LocationInfo from '../components/LocationInfo';
 import { sendWhatsAppGeneral } from '../utils/whatsapp';
 import { useState } from 'react';
 
@@ -76,6 +77,8 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      <LocationInfo />
 
       <section className="section-padding bg-white">
         <div className="container-luxury">
