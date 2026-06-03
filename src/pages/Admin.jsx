@@ -269,7 +269,7 @@ const Admin = () => {
               type="email"
               value={email}
               onChange={(event) => setEmail(event.target.value)}
-              className="mb-4 w-full rounded border border-gray-300 px-3 py-2 focus:border-secondary focus:outline-none"
+              className="mb-4 w-full rounded border border-gray-300 px-3 py-2 text-gray-900 focus:border-secondary focus:outline-none"
               placeholder="Email admin Supabase"
               required
             />
@@ -278,7 +278,7 @@ const Admin = () => {
             type="password"
             value={password}
             onChange={(event) => setPassword(event.target.value)}
-            className="mb-4 w-full rounded border border-gray-300 px-3 py-2 focus:border-secondary focus:outline-none"
+            className="mb-4 w-full rounded border border-gray-300 px-3 py-2 text-gray-900 focus:border-secondary focus:outline-none"
             placeholder="Password"
             required
           />
@@ -328,16 +328,16 @@ const Admin = () => {
           <form onSubmit={submitCar} className="rounded-lg bg-white p-6 shadow lg:col-span-1">
             <h2 className="mb-4 text-xl font-bold text-primary">{editingId ? 'Edit Mobil' : 'Tambah Mobil'}</h2>
             <div className="space-y-3">
-              <input required value={form.name} onChange={(event) => updateField('name', event.target.value)} className="w-full rounded border px-3 py-2" placeholder="Nama mobil" />
-              <input required value={form.category} onChange={(event) => updateField('category', event.target.value)} className="w-full rounded border px-3 py-2" placeholder="Kategori" />
+              <input required value={form.name} onChange={(event) => updateField('name', event.target.value)} className="w-full rounded border border-gray-300 px-3 py-2 text-gray-900" placeholder="Nama mobil" />
+              <input required value={form.category} onChange={(event) => updateField('category', event.target.value)} className="w-full rounded border border-gray-300 px-3 py-2 text-gray-900" placeholder="Kategori" />
               <div className="grid grid-cols-2 gap-3">
-                <input required type="number" value={form.capacity} onChange={(event) => updateField('capacity', event.target.value)} className="w-full rounded border px-3 py-2" placeholder="Kapasitas" />
-                <input required type="number" value={form.year} onChange={(event) => updateField('year', event.target.value)} className="w-full rounded border px-3 py-2" placeholder="Tahun" />
+                <input required type="number" value={form.capacity} onChange={(event) => updateField('capacity', event.target.value)} className="w-full rounded border border-gray-300 px-3 py-2 text-gray-900" placeholder="Kapasitas" />
+                <input required type="number" value={form.year} onChange={(event) => updateField('year', event.target.value)} className="w-full rounded border border-gray-300 px-3 py-2 text-gray-900" placeholder="Tahun" />
               </div>
-              <input required type="number" value={form.price} onChange={(event) => updateField('price', event.target.value)} className="w-full rounded border px-3 py-2" placeholder="Harga per hari" />
+              <input required type="number" value={form.price} onChange={(event) => updateField('price', event.target.value)} className="w-full rounded border border-gray-300 px-3 py-2 text-gray-900" placeholder="Harga per hari" />
               <div className="grid grid-cols-2 gap-3">
-                <input required value={form.transmission} onChange={(event) => updateField('transmission', event.target.value)} className="w-full rounded border px-3 py-2" placeholder="Transmisi" />
-                <input required value={form.fuel} onChange={(event) => updateField('fuel', event.target.value)} className="w-full rounded border px-3 py-2" placeholder="Bahan bakar" />
+                <input required value={form.transmission} onChange={(event) => updateField('transmission', event.target.value)} className="w-full rounded border border-gray-300 px-3 py-2 text-gray-900" placeholder="Transmisi" />
+                <input required value={form.fuel} onChange={(event) => updateField('fuel', event.target.value)} className="w-full rounded border border-gray-300 px-3 py-2 text-gray-900" placeholder="Bahan bakar" />
               </div>
               <div className="rounded border border-gray-200 p-3">
                 <label className="mb-2 block text-sm font-semibold text-primary">Gambar utama</label>
@@ -388,9 +388,9 @@ const Admin = () => {
                   </div>
                 )}
               </div>
-              <input value={form.features} onChange={(event) => updateField('features', event.target.value)} className="w-full rounded border px-3 py-2" placeholder="Fitur, pisahkan koma" />
-              <textarea required value={form.description} onChange={(event) => updateField('description', event.target.value)} className="min-h-24 w-full rounded border px-3 py-2" placeholder="Deskripsi" />
-              <textarea required value={form.terms} onChange={(event) => updateField('terms', event.target.value)} className="min-h-20 w-full rounded border px-3 py-2" placeholder="Syarat sewa" />
+              <input value={form.features} onChange={(event) => updateField('features', event.target.value)} className="w-full rounded border border-gray-300 px-3 py-2 text-gray-900" placeholder="Fitur, pisahkan koma" />
+              <textarea required value={form.description} onChange={(event) => updateField('description', event.target.value)} className="min-h-24 w-full rounded border border-gray-300 px-3 py-2 text-gray-900" placeholder="Deskripsi" />
+              <textarea required value={form.terms} onChange={(event) => updateField('terms', event.target.value)} className="min-h-20 w-full rounded border border-gray-300 px-3 py-2 text-gray-900" placeholder="Syarat sewa" />
             </div>
             <div className="mt-5 flex gap-3">
               <button type="submit" disabled={busy} className="rounded bg-primary px-4 py-2 font-semibold text-white disabled:opacity-60">
@@ -408,22 +408,22 @@ const Admin = () => {
             <h2 className="mb-4 text-xl font-bold text-primary">Daftar Mobil</h2>
             <div className="overflow-x-auto">
               <table className="w-full min-w-[720px] text-left text-sm">
-                <thead className="bg-neutral-light">
+                <thead className="bg-gray-100">
                   <tr>
-                    <th className="p-3">Nama</th>
-                    <th className="p-3">Kategori</th>
-                    <th className="p-3">Harga</th>
-                    <th className="p-3">Transmisi</th>
-                    <th className="p-3">Aksi</th>
+                    <th className="p-3 text-gray-900">Nama</th>
+                    <th className="p-3 text-gray-900">Kategori</th>
+                    <th className="p-3 text-gray-900">Harga</th>
+                    <th className="p-3 text-gray-900">Transmisi</th>
+                    <th className="p-3 text-gray-900">Aksi</th>
                   </tr>
                 </thead>
                 <tbody>
                   {cars.map((car) => (
                     <tr key={car.id} className="border-b">
-                      <td className="p-3 font-semibold">{car.name}</td>
-                      <td className="p-3">{car.category}</td>
-                      <td className="p-3">Rp {car.price.toLocaleString('id-ID')}</td>
-                      <td className="p-3">{car.transmission}</td>
+                      <td className="p-3 font-semibold text-gray-900">{car.name}</td>
+                      <td className="p-3 text-gray-900">{car.category}</td>
+                      <td className="p-3 text-gray-900">Rp {car.price.toLocaleString('id-ID')}</td>
+                      <td className="p-3 text-gray-900">{car.transmission}</td>
                       <td className="p-3">
                         <button type="button" onClick={() => startEdit(car)} className="mr-2 rounded bg-secondary px-3 py-1 font-semibold text-primary">
                           Edit
