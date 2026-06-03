@@ -14,7 +14,7 @@ const TestimonialSlider = () => {
     <section className="section-padding bg-editorial">
       <div className="container-luxury text-center">
         <p className="eyebrow justify-center">Testimoni</p>
-        <h2 className="mt-3 mb-12 text-3xl font-extrabold text-primary md:text-4xl">
+        <h2 className="mt-3 mb-12 text-3xl font-extrabold text-white md:text-4xl">
           Pengalaman Pelanggan
         </h2>
 

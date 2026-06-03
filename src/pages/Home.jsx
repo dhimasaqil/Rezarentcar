@@ -57,11 +57,11 @@ const Home = () => {
     <div>
       <HeroSection />
 
-      <section className="section-padding bg-neutral-light">
+      <section className="section-padding bg-black">
         <div className="container-luxury">
           <div className="mx-auto mb-12 max-w-2xl text-center">
             <p className="eyebrow justify-center">Layanan</p>
-            <h2 className="mt-3 text-3xl font-black text-primary md:text-4xl">
+            <h2 className="mt-3 text-3xl font-black text-white md:text-4xl">
               Keunggulan Layanan Kami
             </h2>
           </div>
@@ -80,16 +80,16 @@ const Home = () => {
 
       <LocationInfo />
 
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-black">
         <div className="container-luxury">
           <div className="mb-12 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div>
               <p className="eyebrow">Showroom</p>
-              <h2 className="mt-3 text-3xl font-black text-primary md:text-4xl">
+              <h2 className="mt-3 text-3xl font-black text-white md:text-4xl">
                 Mobil Populer
               </h2>
             </div>
-            <p className="max-w-xl text-sm leading-6 text-gray-600">
+            <p className="max-w-xl text-sm leading-6 text-gray-400">
               Pilih unit yang siap menemani kebutuhan harian, perjalanan keluarga, atau agenda bisnis.
             </p>
           </div>

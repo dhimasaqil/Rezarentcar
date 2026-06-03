@@ -19,7 +19,13 @@
       "Bash(npm run *)",
       "Bash(git push *)",
       "Bash(xargs grep -l \"admin\\\\|dashboard\" -i)",
-      "Bash(curl -s http://localhost:5173)"
+      "Bash(curl -s http://localhost:5173)",
+      "Skill(superpowers:brainstorming)",
+      "Bash(xargs wc -l)",
+      "Skill(superpowers:writing-plans)",
+      "Skill(superpowers:using-superpowers)",
+      "Bash(bash *)",
+      "Bash(cat \"C:\\\\\\\\Users\\\\\\\\ASUS\\\\\\\\AppData\\\\\\\\Local\\\\\\\\Temp\\\\\\\\claude\\\\\\\\D--Vibecode-Rezarentcar\\\\\\\\1fdc1dc0-ee5e-4331-bd9a-32d9e983452a\\\\\\\\tasks\\\\\\\\bniu0x8ol.output\")"
     ]
   }
 }

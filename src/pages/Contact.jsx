@@ -14,7 +14,7 @@ const Contact = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-neutral-light">
+    <div className="min-h-screen bg-black">
       <section className="relative overflow-hidden bg-primary py-20 text-white">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_82%_20%,rgba(255,193,7,0.18),transparent_34%)]" />
         <div className="container-luxury relative">

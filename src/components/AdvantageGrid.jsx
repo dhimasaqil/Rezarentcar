@@ -7,15 +7,15 @@ const advantages = [
 
 const AdvantageGrid = () => {
   return (
-    <section className="section-padding bg-white">
+    <section className="section-padding bg-black">
       <div className="container-luxury">
         <div className="mx-auto mb-12 max-w-2xl text-center">
           <p className="eyebrow justify-center">Keunggulan</p>
-          <h2 className="mt-3 text-3xl font-black text-primary md:text-4xl">Kenapa Memilih Kami</h2>
+          <h2 className="mt-3 text-3xl font-black text-white md:text-4xl">Kenapa Memilih Kami</h2>
         </div>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
           {advantages.map((advantage) => (
-            <div key={advantage.title} className="rounded-lg border border-black/8 bg-neutral-soft p-6">
+            <div key={advantage.title} className="rounded-lg border border-white/10 bg-neutral-soft p-6">
               <div className="mb-5 h-1 w-12 bg-secondary" />
               <h3 className="mb-3 text-xl font-black text-primary">{advantage.title}</h3>
               <p className="text-sm leading-6 text-gray-600">{advantage.description}</p>

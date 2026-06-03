@@ -6,11 +6,11 @@ const testimonials = [
 
 const TestimonialGrid = () => {
   return (
-    <section className="section-padding bg-white">
+    <section className="section-padding bg-black">
       <div className="container-luxury">
         <div className="mx-auto mb-12 max-w-2xl text-center">
           <p className="eyebrow justify-center">Pengalaman</p>
-          <h2 className="mt-3 text-3xl font-extrabold text-primary md:text-4xl">
+          <h2 className="mt-3 text-3xl font-extrabold text-white md:text-4xl">
             Cerita Pelanggan
           </h2>
         </div>

@@ -5,7 +5,7 @@ import TestimonialGrid from '../components/TestimonialGrid';
 
 const About = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-black">
       <AboutHero />
       <AdvantageGrid />
       <LocationMap />

@@ -35,7 +35,7 @@ const Catalog = () => {
   }, [cars, filters]);
 
   return (
-    <div className="min-h-screen bg-neutral-light">
+    <div className="min-h-screen bg-black">
       <section className="relative overflow-hidden bg-primary py-20 text-white">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(255,193,7,0.18),transparent_34%)]" />
         <div className="container-luxury relative">
@@ -56,7 +56,7 @@ const Catalog = () => {
 
           {!loading && !error && (
             <>
-              <div className="mb-6 text-sm font-semibold text-gray-600">
+              <div className="mb-6 text-sm font-semibold text-gray-400">
                 Menampilkan {filteredCars.length} dari {cars.length} mobil.
               </div>
               <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">

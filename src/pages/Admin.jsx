@@ -261,7 +261,7 @@ const Admin = () => {
 
   if (!authenticated) {
     return (
-      <div className="min-h-screen bg-neutral-light py-16">
+      <div className="min-h-screen bg-black py-16">
         <form onSubmit={login} className="mx-auto max-w-sm rounded-lg bg-white p-6 shadow">
           <h1 className="mb-4 text-2xl font-bold text-primary">Admin Login</h1>
           {isSupabaseConfigured && (
@@ -295,12 +295,12 @@ const Admin = () => {
   }
 
   return (
-    <div className="min-h-screen bg-neutral-light py-10">
+    <div className="min-h-screen bg-black py-10">
       <div className="container mx-auto px-4">
         <div className="mb-8 flex flex-col justify-between gap-4 md:flex-row md:items-center">
           <div>
-            <h1 className="text-3xl font-bold text-primary">Admin Mobil</h1>
-            <p className="text-gray-600">
+            <h1 className="text-3xl font-bold text-white">Admin Mobil</h1>
+            <p className="text-gray-400">
               Kelola data mobil dari {dataSource === 'supabase' ? 'Supabase database' : 'localStorage browser'}.
             </p>
           </div>
