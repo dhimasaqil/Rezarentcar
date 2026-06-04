@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { SpeedInsights } from '@vercel/speed-insights/react'
 import { CarProvider } from './context/CarContext'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
@@ -27,6 +28,7 @@ function App() {
           </main>
           <Footer />
           <WhatsAppButton />
+          <SpeedInsights />
         </div>
       </CarProvider>
     </Router>
