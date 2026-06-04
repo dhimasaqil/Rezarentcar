@@ -14,15 +14,15 @@ const ContactForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="rounded-luxury bg-white p-6 shadow-editorial md:p-8">
-      <p className="eyebrow mb-2 text-[10px]">Reservasi Cepat</p>
-      <h2 className="mb-6 text-xl font-extrabold text-primary">Kirim Pesan</h2>
+    <form onSubmit={handleSubmit} className="rounded-luxury bg-black p-6 shadow-editorial md:p-8">
+      <p className="eyebrow mb-2 text-[10px] text-gray-400">Reservasi Cepat</p>
+      <h2 className="mb-6 text-xl font-extrabold text-white">Kirim Pesan</h2>
       <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
         <input
           required
           value={form.name}
           onChange={(event) => updateField('name', event.target.value)}
-          className="field-luxury"
+          className="field-luxury-dark"
           placeholder="Nama"
         />
         <input
@@ -30,21 +30,21 @@ const ContactForm = () => {
           type="email"
           value={form.email}
           onChange={(event) => updateField('email', event.target.value)}
-          className="field-luxury"
+          className="field-luxury-dark"
           placeholder="Email"
         />
         <input
           required
           value={form.phone}
           onChange={(event) => updateField('phone', event.target.value)}
-          className="field-luxury md:col-span-2"
+          className="field-luxury-dark md:col-span-2"
           placeholder="Nomor telepon"
         />
         <textarea
           required
           value={form.message}
           onChange={(event) => updateField('message', event.target.value)}
-          className="field-luxury min-h-36 md:col-span-2"
+          className="field-luxury-dark min-h-36 md:col-span-2"
           placeholder="Pesan"
         />
       </div>

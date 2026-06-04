@@ -1,6 +1,6 @@
 const ContactMap = () => {
   return (
-    <div className="overflow-hidden rounded-lg border border-black/8 bg-white shadow-[0_18px_55px_rgba(0,0,0,0.07)]">
+    <div className="overflow-hidden rounded-lg border border-white/10 bg-black shadow-editorial">
       <iframe
         title="Peta kontak RentCar"
         className="h-72 w-full grayscale"

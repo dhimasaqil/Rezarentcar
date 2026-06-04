@@ -53,10 +53,10 @@ const CarOrderManager = ({ cars, onReorder, busy }) => {
   };
 
   return (
-    <div className="rounded-lg bg-white p-6 shadow">
+    <div className="rounded-lg bg-black border border-white/10 p-6 shadow-editorial">
       <div className="mb-4 flex items-center justify-between">
-        <h2 className="text-xl font-bold text-primary">Atur Urutan Mobil</h2>
-        <p className="text-sm text-gray-600">Drag atau gunakan tombol untuk mengatur urutan</p>
+        <h2 className="text-xl font-bold text-white">Atur Urutan Mobil</h2>
+        <p className="text-sm text-gray-400">Drag atau gunakan tombol untuk mengatur urutan</p>
       </div>
 
       <div className="space-y-2 mb-4">
@@ -70,7 +70,7 @@ const CarOrderManager = ({ cars, onReorder, busy }) => {
             className={`flex items-center gap-3 rounded-lg border-2 p-3 transition-all ${
               draggedItem === index
                 ? 'border-secondary bg-secondary/10 opacity-50'
-                : 'border-gray-200 hover:border-secondary'
+                : 'border-white/20 hover:border-secondary'
             } cursor-move`}
           >
             <div className="flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-full bg-primary text-white font-semibold text-sm">
@@ -78,8 +78,8 @@ const CarOrderManager = ({ cars, onReorder, busy }) => {
             </div>
 
             <div className="flex-grow">
-              <p className="font-semibold text-primary">{car.name}</p>
-              <p className="text-xs text-gray-600">{car.category} • Rp {car.price.toLocaleString('id-ID')}</p>
+              <p className="font-semibold text-white">{car.name}</p>
+              <p className="text-xs text-gray-400">{car.category} • Rp {car.price.toLocaleString('id-ID')}</p>
             </div>
 
             <div className="flex gap-1 flex-shrink-0">
@@ -87,7 +87,7 @@ const CarOrderManager = ({ cars, onReorder, busy }) => {
                 type="button"
                 onClick={() => moveUp(index)}
                 disabled={index === 0}
-                className="rounded bg-gray-200 px-2 py-1 text-sm font-semibold text-primary disabled:opacity-40 hover:bg-gray-300"
+                className="rounded bg-white/10 px-2 py-1 text-sm font-semibold text-white disabled:opacity-40 hover:bg-white/20"
                 title="Naik"
               >
                 ↑
@@ -96,7 +96,7 @@ const CarOrderManager = ({ cars, onReorder, busy }) => {
                 type="button"
                 onClick={() => moveDown(index)}
                 disabled={index === orderedCars.length - 1}
-                className="rounded bg-gray-200 px-2 py-1 text-sm font-semibold text-primary disabled:opacity-40 hover:bg-gray-300"
+                className="rounded bg-white/10 px-2 py-1 text-sm font-semibold text-white disabled:opacity-40 hover:bg-white/20"
                 title="Turun"
               >
                 ↓
@@ -119,7 +119,7 @@ const CarOrderManager = ({ cars, onReorder, busy }) => {
           type="button"
           onClick={handleResetOrder}
           disabled={busy}
-          className="rounded bg-gray-200 px-4 py-2 font-semibold text-primary disabled:opacity-60"
+          className="rounded bg-white/10 px-4 py-2 font-semibold text-white disabled:opacity-60 hover:bg-white/20"
         >
           Reset
         </button>
