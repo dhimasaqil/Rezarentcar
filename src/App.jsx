@@ -8,8 +8,7 @@ import Catalog from './pages/Catalog'
 import Contact from './pages/Contact'
 import Admin from './pages/Admin'
 import WhatsAppButton from './components/WhatsAppButton'
-import { Analytics } from "@vercel/analytics/react"
-import { SpeedInsights } from "@vercel/speed-insights/react"
+
 
 function App() {
   return (
@@ -28,8 +27,6 @@ function App() {
           </main>
           <Footer />
           <WhatsAppButton />
-          <Analytics />
-          <SpeedInsights />
         </div>
       </CarProvider>
     </Router>
