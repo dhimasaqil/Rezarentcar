@@ -17,9 +17,9 @@ const Catalog = () => {
 
   useEffect(() => {
     updateMetaTags(
-      'Katalog Sewa Mobil Hiace Semarang - Pilih Mobil Terbaik',
-      'Katalog lengkap sewa mobil Hiace Semarang dan kendaraan premium lainnya. Pilih berdasarkan kategori, transmisi, dan harga yang sesuai dengan kebutuhan Anda.',
-      'katalog sewa mobil hiace semarang, rental mobil semarang, daftar mobil sewa'
+      'Katalog Rental Mobil Hiace Semarang - Pilih Mobil Terbaik',
+      'Katalog lengkap rental mobil Hiace Semarang dan kendaraan premium lainnya. Pilih berdasarkan kategori, transmisi, dan harga yang sesuai dengan kebutuhan transportasi Anda.',
+      'katalog rental mobil hiace semarang, katalog sewa mobil semarang, daftar mobil rental semarang, rental hiace semarang'
     );
   }, []);
 

@@ -7,9 +7,9 @@ import { updateMetaTags } from '../utils/seo';
 const Contact = () => {
   useEffect(() => {
     updateMetaTags(
-      'Hubungi Reza Rent Car - Sewa Mobil Hiace Semarang',
-      'Hubungi Reza Rent Car Semarang untuk sewa mobil Hiace dan kendaraan premium lainnya. Layanan 24/7 via WhatsApp, telepon, dan email.',
-      'hubungi reza rent car, sewa mobil hiace semarang, kontak rental mobil semarang'
+      'Hubungi Reza Rent Car - Rental Mobil Hiace Semarang',
+      'Hubungi Reza Rent Car Semarang untuk rental mobil Hiace dan kendaraan premium lainnya. Layanan 24/7 via WhatsApp, telepon, dan email. Respon cepat dan profesional.',
+      'hubungi reza rent car, rental mobil hiace semarang, kontak rental mobil semarang, sewa mobil hiace semarang'
     );
   }, []);
 

@@ -5,7 +5,8 @@ import TestimonialSlider from '../components/TestimonialSlider';
 import CarDetailModal from '../components/CarDetailModal';
 import LocationInfo from '../components/LocationInfo';
 import { sendWhatsAppGeneral } from '../utils/whatsapp';
-import { useState } from 'react';
+import { updateMetaTags } from '../utils/seo';
+import { useState, useEffect } from 'react';
 
 const services = [
   {
@@ -48,6 +49,14 @@ const services = [
 
 const Home = () => {
   const [selectedCar, setSelectedCar] = useState(null);
+
+  useEffect(() => {
+    updateMetaTags(
+      'Rental Mobil Hiace Semarang - Sewa Mobil Terpercaya 24/7 | Reza Rent Car',
+      'Rental mobil Hiace Semarang terpercaya dengan harga terjangkau. Sewa mobil premium untuk berbagai kebutuhan. Layanan 24/7, mobil terawat, proses booking mudah via WhatsApp.',
+      'rental mobil hiace semarang, sewa mobil hiace semarang, rental mobil semarang, sewa hiace semarang, rental hiace semarang'
+    );
+  }, []);
 
   const handleCarClick = (car) => {
     setSelectedCar(car);

@@ -59,7 +59,7 @@ export const businessStructuredData = {
   '@type': 'LocalBusiness',
   'name': 'Reza Rent Car Semarang',
   'image': '/images/heroimage.png',
-  'description': 'Sewa mobil Hiace Semarang terpercaya dengan harga terjangkau. Layanan 24/7, mobil terawat, dan proses booking mudah.',
+  'description': 'Rental mobil Hiace Semarang terpercaya dengan harga terjangkau. Sewa mobil premium untuk berbagai kebutuhan transportasi. Layanan 24/7, mobil terawat, dan proses booking mudah.',
   'address': {
     '@type': 'PostalAddress',
     'streetAddress': 'Perusahaan Rowosari Megah Asri 1 Blok F No 3',
@@ -68,11 +68,12 @@ export const businessStructuredData = {
     'postalCode': '50271',
     'addressCountry': 'ID'
   },
-  'telephone': '+62-xxx-xxxx-xxxx',
+  'telephone': '+62-878-6973-2988',
   'url': 'https://rezarentcar.com',
   'priceRange': '$$',
   'areaServed': 'Semarang',
-  'serviceType': 'Car Rental'
+  'serviceType': 'Car Rental',
+  'keywords': 'rental mobil hiace semarang, sewa mobil hiace semarang, rental mobil semarang'
 };
 
 export const faqStructuredData = {
