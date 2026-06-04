@@ -270,7 +270,7 @@ const Admin = () => {
               value={email}
               onChange={(event) => setEmail(event.target.value)}
               className="mb-4 w-full rounded border border-gray-300 px-3 py-2 text-gray-900 focus:border-secondary focus:outline-none"
-              placeholder="Email admin Supabase"
+              placeholder="Email Admin"
               required
             />
           )}
